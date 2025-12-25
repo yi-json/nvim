@@ -3,7 +3,7 @@ return {
 	version = "*",
 	config = function()
 		require("toggleterm").setup({
-			size = 15,
+			size = 10,
 			open_mapping = [[<c-\>]], -- The key to toggle the terminal
 			direction = 'horizontal', -- 'vertical' | 'horizontal' | 'tab' | 'float'
 			shade_filetypes = {},

@@ -27,3 +27,14 @@ vim.keymap.set("v", "<C-/>", "gc", { remap = true })
 -- Map Ctrl + _ (This is what most terminals ACTUALLY send for Ctrl+/)
 vim.keymap.set("n", "<C-_>", "gcc", { remap = true, desc = "Toggle comment line" })
 vim.keymap.set("v", "<C-_>", "gc", { remap = true, desc = "Toggle comment selection" })
+
+-- lua/config/keymaps.lua
+
+-- Smart Home: Close Neo-tree/sidebars before going home to prevent errors
+vim.keymap.set("n", "<leader>h", function()
+	-- Close Neo-tree if it is open
+	vim.cmd("Neotree close")
+
+	-- Open Alpha (The Dashboard)
+	vim.cmd("Alpha")
+end, { desc = "Go to Home" })
