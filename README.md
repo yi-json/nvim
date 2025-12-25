@@ -30,14 +30,15 @@ This configuration is modular. Each file in `lua/plugins/` controls a specific a
 | **`comments.lua`** | **Comment.nvim** | Smart commenting utility. Toggle comments with `gcc` (line) or `gc` (selection). |
 | **`completion.lua`** | **nvim-cmp** | Autocompletion engine. Provides suggestions for code, paths, and snippets as you type. |
 | **`formatting.lua`** | **Conform / None-ls** | Handles auto-formatting (e.g., clang-format, rustfmt) to keep code consistent. |
-| **`lsp.lua`** | **LSP Config** | Connects to Language Servers (clangd, rust_analyzer, gopls) for Go-to-Definition, Hover, and Errors. |
+| **`lsp.lua`** | **LSP Config** | Connects to Language Servers (clangd, rust_analyzer, gopls) for Go-to-Definition and Errors. |
 | **`neotree.lua`** | **Neo-tree** | A file explorer tree for browsing project directories visually. |
+| **`presence.lua`** | **Discord Presence** | Discord Rich Presence integration to show what you're working on in real-time. |
 | **`telescope.lua`** | **Telescope** | Fuzzy finder. Quickly find files (`<space>f`), text (`<space>t`), or buffers. |
 | **`theme.lua`** | **Colorscheme** | Controls the visual style and syntax highlighting colors. |
 | **`toggleterm.lua`** | **ToggleTerm** | Floating/Docked terminal. Toggle it with `Ctrl+\`. |
-| **`treesitter.lua`** | **Treesitter** | Advanced syntax highlighting and parsing. Improves code readability and indentation. |
+| **`treesitter.lua`** | **Treesitter** | Advanced syntax highlighting and parsing for better code readability. |
 | **`vimbegood.lua`** | **Vim Be Good** | A game to practice Vim motions. Run `:VimBeGood` to start training. |
-| **`which-key.lua`** | **Which-Key** | Popup menu that shows available keybindings if you pause while typing a command. |
+| **`which-key.lua`** | **Which-Key** | Popup menu that shows available keybindings if you pause while typing. |
 
 ## Keybind Cheat Sheet
 
