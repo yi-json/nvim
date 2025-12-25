@@ -1,28 +1,38 @@
 # Neovim Configuration
 
+[![Neovim](https://img.shields.io/badge/NeoVim-%2357A143.svg?&style=for-the-badge&logo=neovim&logoColor=white)](https://neovim.io/)
+[![Lua](https://img.shields.io/badge/lua-%232C2D72.svg?style=for-the-badge&logo=lua&logoColor=white)](https://www.lua.org/)
+
 A personalized, high-performance Neovim configuration built for efficiency in C++, Rust, and Go development. This setup utilizes `lazy.nvim` for package management and includes a curated suite of plugins for a modern IDE experience.
 
 
-- **Home Page:** ![homepg.png](assets/homepg.png)
-- **Fuzzy Finder:** ![fuzzyfetch.png](assets/fuzzyfetch.png)
-- **Workspace View:** ![workspace.png](assets/workspace.png)
+| **Dashboard** | **Fuzzy Finding** | **Workspace View** |
+| :---: | :---: | :---: |
+| ![homepg.png](assets/homepg.png) | ![fuzzyfetch.png](assets/fuzzyfetch.png) | ![workspace.png](assets/workspace.png) |
 
-## Installation
+## Fast Setup
+If you are on a brand new machine, use the automated setup script to install Neovim, system dependencies (ripgrep, build tools), and synced plugins in one go.
 
 ```bash
-# 1. Backup existing config
-mv ~/.config/nvim ~/.config/nvim.bak
-
-# 2. Clone repository
 git clone git@github.com:yi-json/nvim.git ~/.config/nvim
-
-# 3. Start Neovim (Plugins will install automatically)
+cd ~/.config/nvim
+chmod +x setup.sh
+./setup.sh
 nvim
 ```
 
-##  Plugin Reference
+Note: The script does not include the **Nerd Font** - it needs to be downloaded manually
 
-This configuration is modular. Each file in `lua/plugins/` controls a specific aspect of the editor.
+## Prerequisites
+If you prefer a manual setup, ensure the following are installed:
+
+1. **Neovim (v0.9.0+):** `pacman -S neovim` (arch), `brew install neovim` (macOS), or `apt install neovim` (ubuntu/debian).
+2. **Ripgrep:** Essential for Telescope fuzzy finding.
+3. **Build Tools:** `gcc` or `clang` for Treesitter parsers.
+4. **Nerd Font:** Required for icons. [JetBrainsMono Nerd Font](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/JetBrainsMono.zip) is recommended.
+
+##  Plugin Reference
+This config follows a modular structure where each plugin has its own dedicated configuration file.
 
 | File | Plugin / Feature | Description |
 | :--- | :--- | :--- |
