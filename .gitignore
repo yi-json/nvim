@@ -1,0 +1,8 @@
+# macOS junk
+.DS_Store
+
+# Neovim swap files (just in case)
+*.swp
+*.swo
+
+lua/custom/local_secrets.lua

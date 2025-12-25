@@ -1,0 +1,82 @@
+return {
+	"goolord/alpha-nvim",
+	event = "VimEnter",
+	dependencies = { "nvim-tree/nvim-web-devicons" },
+	config = function()
+		local dashboard = require("alpha.themes.dashboard")
+
+		-- 1. HEADER: The specific 3D style from your reference
+		dashboard.section.header.val = {
+			"                                                     ",
+			"  ███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗ ",
+			"  ████╗  ██║██╔════╝██╔═══██╗██║   ██║██║████╗ ████║ ",
+			"  ██╔██╗ ██║█████╗  ██║   ██║██║   ██║██║██╔████╔██║ ",
+			"  ██║╚██╗██║██╔══╝  ██║   ██║╚██╗ ██╔╝██║██║╚██╔╝██║ ",
+			"  ██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║ ",
+			"  ╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝ ",
+			"                                                     ",
+		}
+
+		-- 2. BUTTONS
+		-- Note: We add specific opts to color the shortcut (sc) distinct from the text
+		dashboard.section.buttons.val = {
+			dashboard.button("e", "  New File", ":ene <BAR> startinsert <CR>"),
+			dashboard.button("f", "  Find File", ":Telescope find_files <CR>"),
+			dashboard.button("r", "  Recent Files", ":Telescope oldfiles <CR>"),
+			dashboard.button("t", "  Find Text", ":Telescope live_grep <CR>"),
+			dashboard.button("c", "  Config", ":e $MYVIMRC <CR>"),
+			dashboard.button("q", "  Quit", ":qa<CR>"),
+		}
+
+		-- 3. QUOTES FOOTER
+		local quotes = {
+			{ "The computing scientist's main challenge is not to", "get confused by the complexities of his own making.", "",                "- Edsger W. Dijkstra" },
+			{ "Talk is cheap. Show me the code.",                   "",                                                    "- Linus Torvalds" },
+			{ "Software is like sex: it's better when it's free.",  "",                                                    "- Linus Torvalds" },
+			{ "Simplicity is the soul of efficiency.",              "",                                                    "- Austin Freeman" },
+		}
+
+		local function get_quote()
+			math.randomseed(os.time())
+			return quotes[math.random(#quotes)]
+		end
+
+		dashboard.section.footer.val = get_quote()
+
+		-- 4. STYLING & COLORS
+
+		-- Header: Golden Yellow (#FAC863 matches the screenshot)
+		vim.api.nvim_set_hl(0, "AlphaHeaderYellow", { fg = "#FAC863" })
+		-- Footer: Pink/Salmon
+		vim.api.nvim_set_hl(0, "AlphaFooterPink", { fg = "#F28FAD" })
+		-- Shortcuts: Red/Orange for the keys (e, f, q)
+		vim.api.nvim_set_hl(0, "AlphaShortcutRed", { fg = "#F44747" })
+
+		dashboard.section.header.opts.hl = "AlphaHeaderYellow"
+		dashboard.section.buttons.opts.hl = "AlphaButtons"
+		dashboard.section.footer.opts.hl = "AlphaFooterPink"
+
+		-- Apply the Red highlight to the button shortcuts
+		for _, button in ipairs(dashboard.section.buttons.val) do
+			button.opts.hl_shortcut = "AlphaShortcutRed"
+		end
+
+		-- 5. LAYOUT
+		-- Reset positioning to center everything properly
+		dashboard.section.header.opts.position = "center"
+		dashboard.section.buttons.opts.position = "center"
+		dashboard.section.footer.opts.position = "center"
+
+		dashboard.config.layout = {
+			{ type = "padding", val = 4 },
+			dashboard.section.header,
+			{ type = "padding", val = 2 },
+			dashboard.section.buttons,
+			{ type = "padding", val = 2 },
+			dashboard.section.footer,
+		}
+
+		-- 6. SETUP
+		require("alpha").setup(dashboard.config)
+	end,
+}
