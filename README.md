@@ -2,6 +2,13 @@
 
 A personalized, high-performance Neovim configuration built for efficiency in C++, Rust, and Go development. This setup utilizes `lazy.nvim` for package management and includes a curated suite of plugins for a modern IDE experience.
 
+
+- **Home Page:** ![homepg.png](assets/homepg.png)
+- **Fuzzy Finder:** ![fuzzyfetch.png](assets/fuzzyfetch.png)
+- **Workspace View:** ![workspace.png](assets/workspace.png)
+
+If images do not display on GitHub, make sure the `assets/` directory is committed and the image files are present at those paths.
+
 ## Installation
 
 ```bash
