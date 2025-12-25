@@ -32,7 +32,7 @@ This configuration is modular. Each file in `lua/plugins/` controls a specific a
 | **`formatting.lua`** | **Conform / None-ls** | Handles auto-formatting (e.g., clang-format, rustfmt) to keep code consistent. |
 | **`lsp.lua`** | **LSP Config** | Connects to Language Servers (clangd, rust_analyzer, gopls) for Go-to-Definition and Errors. |
 | **`neotree.lua`** | **Neo-tree** | A file explorer tree for browsing project directories visually. |
-| **`presence.lua`** | **Discord Presence** | Discord Rich Presence integration to show what you're working on in real-time. |
+| **`discord.lua`** | **Discord Presence** | Discord Rich Presence integration to show what you're working on in real-time. |
 | **`telescope.lua`** | **Telescope** | Fuzzy finder. Quickly find files (`<space>f`), text (`<space>t`), or buffers. |
 | **`theme.lua`** | **Colorscheme** | Controls the visual style and syntax highlighting colors. |
 | **`toggleterm.lua`** | **ToggleTerm** | Floating/Docked terminal. Toggle it with `Ctrl+\`. |
