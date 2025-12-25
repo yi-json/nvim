@@ -7,8 +7,6 @@ A personalized, high-performance Neovim configuration built for efficiency in C+
 - **Fuzzy Finder:** ![fuzzyfetch.png](assets/fuzzyfetch.png)
 - **Workspace View:** ![workspace.png](assets/workspace.png)
 
-If images do not display on GitHub, make sure the `assets/` directory is committed and the image files are present at those paths.
-
 ## Installation
 
 ```bash
