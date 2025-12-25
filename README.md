@@ -28,7 +28,7 @@ If you prefer a manual setup, ensure the following are installed:
 1. **Neovim (v0.9.0+):** `pacman -S neovim` (arch), `brew install neovim` (macOS), or `apt install neovim` (ubuntu/debian).
 2. **Ripgrep:** Essential for Telescope fuzzy finding.
 3. **Build Tools:** `gcc` or `clang` for Treesitter parsers.
-4. **Nerd Font:** Required for icons. [JetBrainsMono Nerd Font](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/JetBrainsMono.zip) is recommended.
+4. **Nerd Font:** Required for icons. [JetBrainsMono Nerd Font](https://www.nerdfonts.com/font-downloads) is recommended.
 
 ##  Plugin Reference
 This config follows a modular structure where each plugin has its own dedicated configuration file.
@@ -48,6 +48,7 @@ This config follows a modular structure where each plugin has its own dedicated 
 | **`treesitter.lua`** | **Treesitter** | Advanced syntax highlighting and parsing for better code readability. |
 | **`vimbegood.lua`** | **Vim Be Good** | A game to practice Vim motions. Run `:VimBeGood` to start training. |
 | **`which-key.lua`** | **Which-Key** | Popup menu that shows available keybindings if you pause while typing. |
+| **`autopairs.lua`** | **Autopairs** | Automatic closing of parentheses, braces, and quotes. |
 
 ## Keybind Cheat Sheet
 
