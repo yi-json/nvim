@@ -49,6 +49,7 @@ This config follows a modular structure where each plugin has its own dedicated 
 | **`vimbegood.lua`** | **Vim Be Good** | A game to practice Vim motions. Run `:VimBeGood` to start training. |
 | **`which-key.lua`** | **Which-Key** | Popup menu that shows available keybindings if you pause while typing. |
 | **`autopairs.lua`** | **Autopairs** | Automatic closing of parentheses, braces, and quotes. |
+| **`claudecode.lua`** | **Claude Code** | AI coding assistant. Open a Claude terminal panel, send context, and accept/reject diffs inline. |
 
 ## Keybind Cheat Sheet
 
@@ -71,6 +72,18 @@ This config follows a modular structure where each plugin has its own dedicated 
 * `a` : Add new file (inside explorer)
 * `d` : Delete file (inside explorer)
 * `r` : Rename file (inside explorer)
+
+### **Claude Code (AI Assistant)**
+* `<Space> ac` : Toggle Claude terminal panel
+* `<Space> af` : Focus Claude terminal
+* `<Space> ar` : Resume last Claude session
+* `<Space> aC` : Continue previous conversation
+* `<Space> am` : Select Claude model
+* `<Space> ab` : Add current buffer to Claude context
+* `<Space> as` : Send visual selection to Claude (visual mode)
+* `<Space> as` : Add file to Claude context (in Neo-tree)
+* `<Space> aa` : Accept Claude's proposed diff
+* `<Space> ad` : Deny Claude's proposed diff
 
 ### **LSP (Code Intelligence)**
 * `gd` : Go to Definition
