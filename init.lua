@@ -12,3 +12,8 @@ vim.opt.expandtab = true -- Convert tabs to spaces (recommended)
 vim.opt.softtabstop = 4  -- Makes Backspace delete 4 spaces like a Tab
 
 vim.opt.clipboard = "unnamedplus"
+
+-- Better Line Wrapping (for md)
+vim.opt.wrap = true         -- Enable line wrapping
+vim.opt.linebreak = true    -- Wrap lines at convenient points (avoid splitting words)
+vim.opt.breakindent = true  -- Wrapped lines will keep the same indent level
