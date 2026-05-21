@@ -11,7 +11,7 @@ return {
                 html = { "prettier" },
                 json = { "prettier" },
                 yaml = { "prettier" },
-                markdown = { "prettier" },
+                markdown = { "deno_fmt" },
 
                 -- Use "stylua" for Lua
                 lua = { "stylua" },
