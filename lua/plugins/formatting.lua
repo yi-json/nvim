@@ -11,7 +11,7 @@ return {
                 html = { "prettier" },
                 json = { "prettier" },
                 yaml = { "prettier" },
-                markdown = { "deno_fmt" },
+                markdown = { "prettier" },
 
                 -- Use "stylua" for Lua
                 lua = { "stylua" },
@@ -21,6 +21,10 @@ return {
             },
 
             formatters = {
+                prettier = {
+                    -- prose-wrap=always enforces the print-width limit on markdown paragraphs
+                    prepend_args = { "--print-width", "80", "--prose-wrap", "always" },
+                },
                 ["clang-format"] = {
                     -- "IndentWidth: 4" forces 4 spaces.
                     -- "UseTab: Never" ensures it uses spaces, not \t characters.
