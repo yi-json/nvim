@@ -1,5 +1,6 @@
 require("config.keymaps")
 require("config.lazy")
+require("config.templates")
 
 -- Hybrid Line Numbers
 vim.opt.number = true         -- Show line numbers
