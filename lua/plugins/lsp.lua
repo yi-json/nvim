@@ -31,5 +31,24 @@ return {
                 vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, opts)
             end,
         })
+
+        -- 4. Diagnostics: show the actual error text, not just the sign
+        vim.diagnostic.config({
+            virtual_text = { source = true, prefix = "●" },
+            float = { source = true, border = "rounded" },
+            severity_sort = true,
+        })
+
+        vim.keymap.set('n', '<leader>d', vim.diagnostic.open_float, { desc = "Diagnostics: show line error" })
+        vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = "Diagnostics: prev" })
+        vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = "Diagnostics: next" })
+
+        -- auto-popup the full diagnostic message when the cursor rests on an error line
+        vim.api.nvim_create_autocmd('CursorHold', {
+            group = vim.api.nvim_create_augroup('UserDiagnosticHover', {}),
+            callback = function()
+                vim.diagnostic.open_float(nil, { focus = false })
+            end,
+        })
     end
 }

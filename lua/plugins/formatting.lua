@@ -6,12 +6,7 @@ return {
 
         conform.setup({
             formatters_by_ft = {
-                -- Use "prettier" for web stuff
-                javascript = { "prettier" },
-                html = { "prettier" },
-                json = { "prettier" },
-                yaml = { "prettier" },
-                markdown = { "prettier" },
+                markdown = { "mdformat" },
 
                 -- Use "stylua" for Lua
                 lua = { "stylua" },
@@ -21,9 +16,9 @@ return {
             },
 
             formatters = {
-                prettier = {
-                    -- prose-wrap=always enforces the print-width limit on markdown paragraphs
-                    prepend_args = { "--print-width", "80", "--prose-wrap", "always" },
+                mdformat = {
+                    -- Wraps paragraph text at 80 columns instead of leaving it on one line.
+                    prepend_args = { "--wrap", "80" },
                 },
                 ["clang-format"] = {
                     -- "IndentWidth: 4" forces 4 spaces.
