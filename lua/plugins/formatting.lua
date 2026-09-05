@@ -17,8 +17,8 @@ return {
 
             formatters = {
                 mdformat = {
-                    -- Wraps paragraph text at 80 columns instead of leaving it on one line.
-                    prepend_args = { "--wrap", "80" },
+                    -- Wraps paragraph text at 60 columns instead of leaving it on one line.
+                    prepend_args = { "--wrap", "60" },
                 },
                 ["clang-format"] = {
                     -- "IndentWidth: 4" forces 4 spaces.
