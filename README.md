@@ -57,6 +57,9 @@ This config follows a modular structure where each plugin has its own dedicated 
 
 ### **General**
 * `<Space>` : Leader Key (used for most custom commands)
+* `Ctrl + f` : Find in File (starts a `/` search; press `Enter` to jump to the first match)
+  * `n` : Jump to next match
+  * `N` : Jump to previous match
 * `Ctrl + \` : Toggle Terminal
 * `gcc` : Comment/Uncomment current line
 * `:VimBeGood` : Start the Vim training game

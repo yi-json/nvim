@@ -20,6 +20,11 @@ vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Move to right window" })
 -- Select all with Ctrl + a
 vim.keymap.set("n", "<C-a>", "gg<S-v>G", { desc = "Select all lines" })
 
+-- Find in file with Ctrl + f (like other editors; overrides default page-down)
+vim.keymap.set("n", "<C-f>", "/", { desc = "Find in file" })
+vim.keymap.set("v", "<C-f>", "<Esc>/", { desc = "Find in file" })
+vim.keymap.set("i", "<C-f>", "<Esc>/", { desc = "Find in file" })
+
 -- Toggle comment with Ctrl + /
 vim.keymap.set("n", "<C-/>", "gcc", { remap = true })
 vim.keymap.set("v", "<C-/>", "gc", { remap = true })
