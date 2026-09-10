@@ -14,6 +14,10 @@ vim.opt.softtabstop = 4  -- Makes Backspace delete 4 spaces like a Tab
 
 vim.opt.clipboard = "unnamedplus"
 
+-- Auto-reload buffers when their file changes on disk (e.g. edited in another
+-- nvim instance) instead of showing stale content until manually reloaded.
+vim.opt.autoread = true
+
 -- Better Line Wrapping (for md)
 vim.opt.wrap = true         -- Enable line wrapping
 vim.opt.linebreak = true    -- Wrap lines at convenient points (avoid splitting words)
