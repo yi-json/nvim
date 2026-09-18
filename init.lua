@@ -2,9 +2,9 @@ require("config.keymaps")
 require("config.lazy")
 require("config.templates")
 
--- Hybrid Line Numbers
-vim.opt.number = true         -- Show line numbers
-vim.opt.relativenumber = true -- Show relative line numbers
+-- Absolute Line Numbers
+vim.opt.number = true          -- Show line numbers
+vim.opt.relativenumber = false -- Use absolute numbers, not relative
 
 -- Set tab width to 4 spaces
 vim.opt.tabstop = 4      -- Width of a tab character
