@@ -118,6 +118,8 @@ Automatic closing of parentheses, braces, and quotes. |
 
 ```text
 ~/.config/nvim
+├── bin
+│   └── mdcodefmt         # Formats code fences inside markdown (needs python3)
 ├── init.lua              # Entry point
 ├── lazy-lock.json        # Plugin version lockfile (DO NOT DELETE)
 └── lua

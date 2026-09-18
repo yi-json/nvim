@@ -38,7 +38,7 @@ return {
                 -- on fenced python/js/ts/bash/rust/go blocks inside markdown.
                 -- Same in-place, exit-1-means-changed convention as clang-format-docs.
                 ["mdcodefmt"] = {
-                    command = "mdcodefmt",
+                    command = vim.fn.stdpath("config") .. "/bin/mdcodefmt",
                     args = { "$FILENAME" },
                     stdin = false,
                     exit_codes = { 0, 1 },
