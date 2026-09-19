@@ -18,12 +18,13 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
 elif [[ "$OSTYPE" == "darwin"* ]]; then
     if command -v brew >/dev/null 2>&1; then
         # neovim/ripgrep/git: editor + telescope grep
+        # tree-sitter-cli:    required by nvim-treesitter (main) to build parsers
         # go:                 mason builds gopls with `go install`
         # rust:               rustfmt for format-on-save
         # stylua:             Lua formatter
         # mdformat:           markdown formatter
         # black/prettier/shfmt: used by bin/mdcodefmt for fenced code blocks
-        brew install neovim ripgrep git go rust stylua mdformat black prettier shfmt
+        brew install neovim ripgrep git tree-sitter-cli go rust stylua mdformat black prettier shfmt
     else
         echo "Homebrew not found - skipping brew installs."
         SKIPPED+=("Homebrew: install it from https://brew.sh, then re-run this script")

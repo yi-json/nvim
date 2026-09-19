@@ -38,7 +38,9 @@ installed:
    `brew install neovim` (macOS), or `apt install neovim`
    (ubuntu/debian).
 1. **Ripgrep:** Essential for Telescope fuzzy finding.
-1. **Build Tools:** `gcc` or `clang` for Treesitter parsers.
+1. **Build Tools:** `gcc` or `clang`, plus the `tree-sitter`
+   CLI (`brew install tree-sitter-cli`), for building
+   Treesitter parsers.
 1. **Nerd Font:** Required for icons.
    [JetBrainsMono Nerd Font](https://www.nerdfonts.com/font-downloads)
    is recommended.
